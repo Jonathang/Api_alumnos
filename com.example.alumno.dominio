@@ -1,0 +1,111 @@
+package com.example.alumno.dominio;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="ALUMNO")
+public class Alumno {
+	
+	@Id
+	@Column(name="ID_ALUMNO", columnDefinition = "NUMBER")
+	int id_alumno;
+	
+	@Column(name="NOMBRE", columnDefinition = "NVARCHAR2(100)")
+	String nombre;
+	
+	@Column(name="APP", columnDefinition = "NVARCHAR2(100)")
+	String app;
+	
+	@Column(name="CARRERA", columnDefinition = "NVARCHAR2(100)")
+	String carrera;
+	
+	@Column(name="ESTADO", columnDefinition = "NVARCHAR2(100)")
+	String estado;
+	
+	@Column(name="EDAD", columnDefinition = "NUMBER")
+	int edad;
+	
+	@Column(name="ESTATURAR", columnDefinition = "NUMBER")
+	double estatura;
+
+	public Alumno() {
+	}
+
+	public Alumno(int id_alumno, String nombre, String app, String carrera, String estado, int edad, double estatura) {
+		this.id_alumno = id_alumno;
+		this.nombre = nombre;
+		this.app = app;
+		this.carrera = carrera;
+		this.estado = estado;
+		this.edad = edad;
+		this.estatura = estatura;
+	}
+
+	public int getId_alumno() {
+		return id_alumno;
+	}
+
+	public void setId_alumno(int id_alumno) {
+		this.id_alumno = id_alumno;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getApp() {
+		return app;
+	}
+
+	public void setApp(String app) {
+		this.app = app;
+	}
+
+	public String getCarrera() {
+		return carrera;
+	}
+
+	public void setCarrera(String carrera) {
+		this.carrera = carrera;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
+	public int getEdad() {
+		return edad;
+	}
+
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+
+	public double getEstatura() {
+		return estatura;
+	}
+
+	public void setEstatura(double estatura) {
+		this.estatura = estatura;
+	}
+
+	@Override
+	public String toString() {
+		return "Alumno [id_alumno=" + id_alumno + ", nombre=" + nombre + ", app=" + app + ", carrera=" + carrera
+				+ ", estado=" + estado + ", edad=" + edad + ", estatura=" + estatura + "]";
+	}
+
+	
+
+}
